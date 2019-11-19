@@ -20,8 +20,11 @@ const NavText = styled.ul`
   margin-right: 63vw;
 `;
 const NavTextItem = styled.li`
-  color: white;
+  color: white; 
   margin: 0 10px;
+  :hover {
+    opacity: 0.5;
+  }
 `;
 
 const NavIcon = styled.ul`
@@ -51,7 +54,7 @@ const Banner = (props) => {
           <NavTextItem>TV프로그램</NavTextItem>
           <NavTextItem>영화</NavTextItem>
           <NavTextItem>최신 등록 컨텐츠</NavTextItem>
-          <NavTextItem>내가 찜한 컨텐츠</NavTextItem>
+        <NavTextItem>내가 찜한 컨텐츠</NavTextItem>
         </NavText>
         <NavIcon>
           <NavIconItem>

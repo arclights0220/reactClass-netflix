@@ -1,6 +1,6 @@
-import React from 'react';
-import Main from './pages/main';
-import { createGlobalStyle } from 'styled-components';
+import React from "react";
+import Main from "./pages/main";
+import { createGlobalStyle } from "styled-components";
 
 const GlobalStyle = createGlobalStyle`
 * {
@@ -10,12 +10,12 @@ const GlobalStyle = createGlobalStyle`
 
 body {
   background-color: black;  
-}`
+}`;
 
 function App() {
   return (
     <div>
-      <GlobalStyle />
+         <GlobalStyle />
       <Main />
     </div>
   );
