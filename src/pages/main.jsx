@@ -9,7 +9,8 @@ class Main extends React.Component {
 
     render() {
         return (
-            <Banner/>
+            <Banner />
+            <Preview />
         )
     }
 }
