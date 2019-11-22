@@ -10,7 +10,7 @@ const MovieContainerWrapper = styled.div`
     margin-bottom: 25px;
   }
 `;
-class Main extends React.Component {
+class Tv extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -18,19 +18,7 @@ class Main extends React.Component {
     };
   }
 
-  componentDidMount() {
-    axios
-      .get(
-        "https://api.themoviedb.org/3/movie/popular?api_key=a36305ddf529faa0c37acbf47e633d08&language=ko-kr"
-      )
-      .then(response => {
-        console.log(response);
-        this.setState({ movies: response.data.results });
-      })
-      .catch(err => {
-        console.log("err!!", err);
-      });
-  }
+  componentDidMount() {}
 
   render() {
     return (
@@ -39,10 +27,10 @@ class Main extends React.Component {
         <MovieContainerWrapper
           style={{ marginTop: "45%", overflowX: "hidden", width: "100%" }}
         >
-          <MovieContainer title="TV프로그램" movies={this.state.movies} />
+          <MovieContainer title="TV프로그램" movies={[{ title: "Test" }]} />
         </MovieContainerWrapper>
       </>
     );
   }
 }
-export default withLayout(Main);
+export default withLayout(Tv);
